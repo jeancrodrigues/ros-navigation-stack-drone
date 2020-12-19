@@ -1,0 +1,14 @@
+local_costmap:
+  global_frame: map
+  robot_base_frame: quad_handle
+  update_frequency: 1
+  publish_frequency: 1
+  static_map: false
+  rolling_window: true
+  width: 3.5
+  height: 3.5
+  resolution: 0.005
+  origin_x: 0.0
+  origin_y: 0.0
+
+

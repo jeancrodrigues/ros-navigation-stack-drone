@@ -1,0 +1,6 @@
+
+
+
+grid = rosmessage( 'nav_msgs/OccupancyGrid');
+sub = rossubscriber('/move_base/global_costmap/costmap');
+

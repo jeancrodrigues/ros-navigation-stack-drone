@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="yaml/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="yaml/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="yaml/local_costmap_params.yaml" command="load" />
+    <rosparam file="yaml/global_costmap_params.yaml" command="load" />
+    <param name="conservative_reset_dist" type="double" value="1.0" />
+    <param name="controller_frequency" type="double" value="1.0" />
+  </node>
+</launch>

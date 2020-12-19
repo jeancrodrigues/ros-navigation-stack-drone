@@ -1,0 +1,12 @@
+plugins: 
+    - {name: static_map,       type: "costmap_2d::StaticLayer"}
+    - {name: obstacles,        type: "costmap_2d::ObstacleLayer"}
+    - {name: inflation,        type: "costmap_2d::InflationLayer"}
+    - {name: lethal_layer,     type: "simple_layer_namespace::LethalLayer" }
+publish_frequency: 1.0
+obstacles:
+	observation_sources: laser_scan_sensor
+	laser_scan_sensor: {sensor_frame: laser_frame, data_type: LaserScan, topic:/scan, marking: true, clearing: true}
+inflation:
+  inflation_radius: 0.12
+
